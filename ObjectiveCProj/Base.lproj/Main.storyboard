@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvW-oL-rC8">
+                                <rect key="frame" x="62" y="223" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="okButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nac-E3-cB3"/>
+                                    <segue destination="QNt-KI-w13" kind="presentation" id="zvV-tU-5lU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUd-2s-67X">
+                                <rect key="frame" x="58" y="363" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Custom"/>
+                                <connections>
+                                    <segue destination="Yba-jH-yAy" kind="presentation" id="k3n-Yu-25I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="121"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="lNf-TU-Duw">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QNt-KI-w13" customClass="SecondVC" customModule="ObjectiveCProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xah-3V-8Q1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUa-te-Rg8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem image="location" id="QXI-ZE-YGE">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="findAddressWithSender:" destination="QNt-KI-w13" id="7OJ-Zk-LtG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kF5-Wt-J6J"/>
+                                    <barButtonItem image="directions" id="ZTr-KC-Wdp">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                    <barButtonItem width="30" style="plain" systemItem="fixedSpace" id="OWI-8W-eaf"/>
+                                    <barButtonItem image="steering_wheel" id="Zpf-fu-109">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="changeTravelModeWithSender:" destination="QNt-KI-w13" id="UO9-Bs-zje"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1RG-bW-pUf"/>
+                                    <barButtonItem image="map" id="Wic-yR-mQ0">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="changeMapTypeWithSender:" destination="QNt-KI-w13" id="PJf-1a-kkz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dk4-uX-sLU" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="714"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jws-lU-igV">
+                                <rect key="frame" x="0.0" y="758" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="boX-01-KkF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aUa-te-Rg8" firstAttribute="leading" secondItem="Dk4-uX-sLU" secondAttribute="leading" id="B8O-p1-tVT"/>
+                            <constraint firstItem="Dk4-uX-sLU" firstAttribute="trailing" secondItem="4uY-YR-Km0" secondAttribute="trailing" id="Dtb-qu-P59"/>
+                            <constraint firstItem="4uY-YR-Km0" firstAttribute="bottom" secondItem="Jws-lU-igV" secondAttribute="bottom" id="E09-20-SWa"/>
+                            <constraint firstItem="Dk4-uX-sLU" firstAttribute="leading" secondItem="4uY-YR-Km0" secondAttribute="leading" id="GpC-ye-Oj5"/>
+                            <constraint firstItem="Dk4-uX-sLU" firstAttribute="top" secondItem="aUa-te-Rg8" secondAttribute="bottom" symbolic="YES" id="KDL-T0-flH"/>
+                            <constraint firstItem="aUa-te-Rg8" firstAttribute="top" secondItem="4uY-YR-Km0" secondAttribute="top" id="p5D-lv-L7n"/>
+                            <constraint firstItem="Jws-lU-igV" firstAttribute="top" secondItem="Dk4-uX-sLU" secondAttribute="bottom" id="qKo-ha-QMZ"/>
+                            <constraint firstItem="Jws-lU-igV" firstAttribute="leading" secondItem="4uY-YR-Km0" secondAttribute="leading" id="sHP-bR-cS4"/>
+                            <constraint firstItem="aUa-te-Rg8" firstAttribute="trailing" secondItem="Dk4-uX-sLU" secondAttribute="trailing" id="vnR-gN-BCe"/>
+                            <constraint firstItem="4uY-YR-Km0" firstAttribute="trailing" secondItem="Jws-lU-igV" secondAttribute="trailing" id="w6a-PR-xkQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4uY-YR-Km0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iNI-jx-waV"/>
+                    <connections>
+                        <outlet property="viewMap" destination="Dk4-uX-sLU" id="N1X-PH-30e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5u-Hb-Trc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="130.58035714285714"/>
+        </scene>
+        <!--Map Path View Controller-->
+        <scene sceneID="p8B-j3-8G5">
+            <objects>
+                <viewController id="Yba-jH-yAy" customClass="MapPathViewController" customModule="ObjectiveCProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="feK-Me-Mva">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIS-Ow-WVP" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="824"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YQ-f9-2zH">
+                                <rect key="frame" x="57" y="54" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="buttonHandlerPlay:" destination="Yba-jH-yAy" eventType="touchUpInside" id="U8J-E6-9Nb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="UIS-Ow-WVP" secondAttribute="bottom" constant="18" id="7wX-ci-teE"/>
+                            <constraint firstItem="UIS-Ow-WVP" firstAttribute="trailing" secondItem="2Ji-4f-mLR" secondAttribute="trailing" id="Rx1-Tq-hHK"/>
+                            <constraint firstItem="UIS-Ow-WVP" firstAttribute="top" secondItem="2Ji-4f-mLR" secondAttribute="top" id="TmP-C8-DDW"/>
+                            <constraint firstItem="UIS-Ow-WVP" firstAttribute="leading" secondItem="2Ji-4f-mLR" secondAttribute="leading" id="kXv-6f-a9Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Ji-4f-mLR"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonPlay" destination="5YQ-f9-2zH" id="0s5-rU-FXf"/>
+                        <outlet property="mapView" destination="UIS-Ow-WVP" id="0ey-aM-Kzn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="917-Nq-6ZR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.68115942029" y="193.52678571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="directions" width="25" height="25"/>
+        <image name="location" width="25" height="25"/>
+        <image name="map" width="25" height="25"/>
+        <image name="steering_wheel" width="25" height="25"/>
+    </resources>
+</document>
